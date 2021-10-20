@@ -67,71 +67,76 @@ function game() {
 
     let round = 0;
 
-    while(player1Score <= 5  || player2Score <= 5) {
+
+    while(true) {
+        
         round++;
         console.log(`round : ${round}`);
-        console.log(`${player1cho} vs ${player2cho}`);
-        console.log(`
-        player 1 : ${player1Score}
-        player 2 : ${player2Score}`);
         
         player1cho = playerSelection();
         player2cho = computerSelection();
 
         // here the game logic 
 
-        if(player1cho == "rock" && player2cho == "rock") {
-            continue;
-        }
-        if(player1cho == "paper" && player2cho == "paper") {
-            continue;
-        }
-        if(player1cho == "scissors" && player2cho == "scissors") {
-            continue;
-        }
-
+        // if(player1cho == "rock" && player2cho == "rock") {
+        // }
+        // if(player1cho == "paper" && player2cho == "paper") {   
+        // }
+        // if(player1cho == "scissors" && player2cho == "scissors") {    
+        // }
 
         if(player1cho == "rock" && player2cho == "paper") {
             player2Score++;
-            continue;
+            
         }
         if(player1cho == "rock" && player2cho == "scissors") {
             player1Score++;
-            continue;
+            
         }
-
-
         if(player1cho == "paper" && player2cho == "rock") {
             player1Score++;
-            continue;
+            
+        
         }
         if(player1cho == "paper" && player2cho == "scissors") {
             player2Score++;
-            continue;
+            
+        
         }
-
-
         if(player1cho == "scissors" && player2cho == "paper") {
             player1Score++;
-            continue;
+            
+        
         }
         if(player1cho == "scissors" && player2cho == "rock") {
             player2Score++;
-            continue;
+            
         }
 
 
 
+        //show what the computer and the player chose , display
+        console.log(`${player1cho} vs ${player2cho}`);
+        console.log(`
+        player 1 : ${player1Score}
+        player 2 : ${player2Score}`);
+
+        //if anyone won , 
+        // if (player1Score >= 5  || player2Score >= 5){
+
+        //     break;
+        // }
+        
+        if (player1Score >= 5) {
+            return "player 1";
+        }
+        if (player2Score >= 5){
+            return "player 2";
+        }
     }
-
-
+    
 
 }
 
-
-computerSelection();
-playerSelection();
-
-game();
-
+    console.log(`The winner is : ${game()}`);
 

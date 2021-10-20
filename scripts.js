@@ -62,10 +62,76 @@ function game() {
     let player1Score = 0;
     let player2Score = 0;
 
+    let player1cho = "";
+    let player2cho = "";
+
+    let round = 0;
+
+    while(player1Score <= 5  || player2Score <= 5) {
+        round++;
+        console.log(`round : ${round}`);
+        console.log(`${player1cho} vs ${player2cho}`);
+        console.log(`
+        player 1 : ${player1Score}
+        player 2 : ${player2Score}`);
+        
+        player1cho = playerSelection();
+        player2cho = computerSelection();
+
+        // here the game logic 
+
+        if(player1cho == "rock" && player2cho == "rock") {
+            continue;
+        }
+        if(player1cho == "paper" && player2cho == "paper") {
+            continue;
+        }
+        if(player1cho == "scissors" && player2cho == "scissors") {
+            continue;
+        }
+
+
+        if(player1cho == "rock" && player2cho == "paper") {
+            player2Score++;
+            continue;
+        }
+        if(player1cho == "rock" && player2cho == "scissors") {
+            player1Score++;
+            continue;
+        }
+
+
+        if(player1cho == "paper" && player2cho == "rock") {
+            player1Score++;
+            continue;
+        }
+        if(player1cho == "paper" && player2cho == "scissors") {
+            player2Score++;
+            continue;
+        }
+
+
+        if(player1cho == "scissors" && player2cho == "paper") {
+            player1Score++;
+            continue;
+        }
+        if(player1cho == "scissors" && player2cho == "rock") {
+            player2Score++;
+            continue;
+        }
+
+
+
+    }
+
+
+
 }
 
 
 computerSelection();
 playerSelection();
-console.log(player1);
-console.log(player2);
+
+game();
+
+

@@ -2,9 +2,6 @@
 let player1 = "";
 let player2= "";
 
-console.log(player1);
-console.log(player2);
-
 function computerSelection() {
     let numRPC = Math.floor(Math.random() * (2 - 0 + 1) + 0);
 
@@ -22,7 +19,8 @@ function computerSelection() {
             break;
       } 
 
-     return;
+     
+    return player2;   
 
 }
 
@@ -56,7 +54,14 @@ function playerSelection() {
         if(isCorrect){
             break;
         }
-    }    
+    }  
+    return player1;  
+}
+
+function game() {
+    let player1Score = 0;
+    let player2Score = 0;
+
 }
 
 

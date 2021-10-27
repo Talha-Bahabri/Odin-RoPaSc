@@ -49,10 +49,11 @@ function playerSelection() {
        
     }
 
+    let player2cho = '';
 
 function gameLogic(player1cho) {
 
-    let player2cho = computerSelection();
+    player2cho = computerSelection();
         
         //here the game logic 
 
@@ -68,7 +69,6 @@ function gameLogic(player1cho) {
 
         if(player1cho == "rock" && player2cho == "paper") {
             player2Score++;
-            console.log("plaaaaaayer 2")
             return 'Player 2 Won';
             
         }
@@ -106,18 +106,22 @@ function gameLogic(player1cho) {
 
     function playRound(){
 
-
+    let winnerName = ``;
     let player1cho = '';
 
         btnRockSel.addEventListener('click', () => {
             console.log('rockkkkkkkkkkkkkkkkkkkk')
             
             player1cho = 'rock';
-            gameLogic(player1cho);
+            winnerName =gameLogic(player1cho);
 
             console.log(`
             player 1 : ${player1Score}
             player 2 : ${player2Score}`);
+
+
+            changingDisplayText(player1cho , player2cho , winnerName);
+
 
              
           });
@@ -146,7 +150,20 @@ function gameLogic(player1cho) {
 
     }
 
-    
+    function changingDisplayText(player1cho , player2cho , winnerName){
+        const firstPar = document.querySelector('.par');
+        firstPar.textContent= `${player1cho} vs ${player2cho}`;
+
+        const winnerNameDisplay = document.createElement('p');
+        
+        winnerNameDisplay.textContent = `${winnerName} this is just a test for now`;
+        firstPar.appendChild(winnerNameDisplay);
+
+
+
+    }
+
+
 
     playRound();
 

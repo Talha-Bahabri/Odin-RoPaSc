@@ -1,1 +1,40 @@
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
 
+    background-color: rgb(83, 83, 83);
+}
+
+.boxResults {
+    display: flex;
+    align-items: center;
+    background-color: green;
+    padding-bottom: 20px;
+
+}
+
+.boxButtons {
+    justify-content: space-evenly;
+    background-color: indigo;
+    padding: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+/* thie is to use in machine font */
+@font-face {
+    font-family: 'creepyFont';
+    src: url('fonts/Frank\ Knows.ttf') 
+}
+
+.buttonAll{
+    font-family: creepyFont;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 50px;
+}

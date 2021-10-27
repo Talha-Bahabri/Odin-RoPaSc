@@ -138,5 +138,5 @@ function game() {
 
 }
 
-    console.log(`The winner is : ${game()}`);
+    // console.log(`The winner is : ${game()}`);
 

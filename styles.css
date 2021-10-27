@@ -8,11 +8,16 @@
 }
 
 .boxResults {
-    display: flex;
+    
     align-items: center;
     background-color: green;
     padding-bottom: 20px;
 
+}
+
+.par {
+    font-size: xx-large;
+    font-weight: bold;
 }
 
 .boxButtons {

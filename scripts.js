@@ -27,27 +27,24 @@ function computerSelection() {
     return player2;   
 
 }
-    const btnRockSel = document.querySelector('#btnRock');
-    const btnPaperSel = document.querySelector('#btnPaper');
-    const btnScissorsSel = document.querySelector('#btnScissors');
 
-function playerSelection() {
+// function playerSelection() {
 
 
-    btnRockSel.addEventListener('click', () => {
-        console.log('rock')
-         return 'rock';
-      });
-    btnPaperSel.addEventListener('click', () => {
-        console.log('paper');
-        return 'paper';
-      });
-    btnScissorsSel.addEventListener('click', () => {
-        console.log('scissors');
-        return 'scissors';
-      });
+//     btnRockSel.addEventListener('click', () => {
+//         console.log('rock')
+//          return 'rock';
+//       });
+//     btnPaperSel.addEventListener('click', () => {
+//         console.log('paper');
+//         return 'paper';
+//       });
+//     btnScissorsSel.addEventListener('click', () => {
+//         console.log('scissors');
+//         return 'scissors';
+//       });
        
-    }
+//     }
 
     let player2cho = '';
 
@@ -104,6 +101,11 @@ function gameLogic(player1cho) {
 
 }
 
+
+    const btnRockSel = document.querySelector('#btnRock');
+    const btnPaperSel = document.querySelector('#btnPaper');
+    const btnScissorsSel = document.querySelector('#btnScissors');
+
     function playRound(){
 
     let winnerName = ``;
@@ -157,28 +159,29 @@ function gameLogic(player1cho) {
 
     function changingDisplayText(player1cho , player2cho , winnerName){
         const firstPar = document.querySelector('.par');
-        firstPar.textContent= `${player1cho} vs ${player2cho}`;
-
-        const winnerNameDisplay = document.createElement('p');
         
         switch(winnerName) {
 
             case `Player 1`:    
-                winnerNameDisplay.textContent = `You win, Sheath your blade, for you have brough peace. `;
+                firstPar.textContent = ` ${player1cho} vs ${player2cho} 
+
+                You win, Sheath your blade, for you have brough peace. `;
                 break;
 
             case `Player 2`:
-                winnerNameDisplay.textContent = `You Died, is this a dark souls refrence ? maybe :) `;
+                firstPar.textContent = `${player1cho} vs ${player2cho} 
+                
+                You Died, is this a dark souls refrence ? maybe :) `;
                 break;
 
             case `Draw!!`:
-                winnerNameDisplay.textContent = `ITS A DRAW!! DON'T STOP THE FIGHT!!`;
+                firstPar.textContent = `${player1cho} vs ${player2cho}
+
+                ITS A DRAW!! DON'T STOP THE FIGHT!!`;
                 break;
         }
 
 
-        
-        firstPar.appendChild(winnerNameDisplay);
 
 
 

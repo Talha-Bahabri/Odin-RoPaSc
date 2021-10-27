@@ -8,7 +8,8 @@
 }
 
 .boxResults {
-    
+    display: flex;
+    justify-items: center;
     align-items: center;
     background-color: green;
     padding-bottom: 20px;
@@ -16,9 +17,12 @@
 }
 
 .par {
+    align-items: center;
     font-size: xx-large;
     font-weight: bold;
+    
 }
+
 
 .boxButtons {
     justify-content: space-evenly;

@@ -69,35 +69,35 @@ function gameLogic(player1cho) {
 
         if(player1cho == "rock" && player2cho == "paper") {
             player2Score++;
-            return 'Player 2 Won';
+            return 'Player 2';
             
         }
         if(player1cho == "rock" && player2cho == "scissors") {
             player1Score++;
-            return 'Player 1 Won';
+            return 'Player 1';
             
         }
         if(player1cho == "paper" && player2cho == "rock") {
             player1Score++;
-            return 'Player 1 Won';
+            return 'Player 1';
             
         
         }
         if(player1cho == "paper" && player2cho == "scissors") {
             player2Score++;
-            return 'Player 2 Won';
+            return 'Player 2';
             
         
         }
         if(player1cho == "scissors" && player2cho == "paper") {
             player1Score++;
-            return 'Player 1 Won';
+            return 'Player 1';
             
         
         }
         if(player1cho == "scissors" && player2cho == "rock") {
             player2Score++;
-            return 'Player 2 Won';
+            return 'Player 2';
             
         }
 
@@ -129,22 +129,27 @@ function gameLogic(player1cho) {
         btnPaperSel.addEventListener('click', () => {
             console.log('paperjjjjjjj');
             player1cho = 'paper';
-            gameLogic(player1cho);
+            winnerName =gameLogic(player1cho);
 
             console.log(`
             player 1 : ${player1Score}
             player 2 : ${player2Score}`);
 
+
+            changingDisplayText(player1cho , player2cho , winnerName);
           });
 
         btnScissorsSel.addEventListener('click', () => {
             console.log('scissorsjjjjjjjj');
             player1cho = 'scissors';
-            gameLogic(player1cho);
+            winnerName =gameLogic(player1cho);
 
             console.log(`
             player 1 : ${player1Score}
             player 2 : ${player2Score}`);
+
+
+            changingDisplayText(player1cho , player2cho , winnerName);
           });
 
 
@@ -156,7 +161,23 @@ function gameLogic(player1cho) {
 
         const winnerNameDisplay = document.createElement('p');
         
-        winnerNameDisplay.textContent = `${winnerName} this is just a test for now`;
+        switch(winnerName) {
+
+            case `Player 1`:    
+                winnerNameDisplay.textContent = `You win, Sheath your blade, for you have brough peace. `;
+                break;
+
+            case `Player 2`:
+                winnerNameDisplay.textContent = `You Died, is this a dark souls refrence ? maybe :) `;
+                break;
+
+            case `Draw!!`:
+                winnerNameDisplay.textContent = `ITS A DRAW!! DON'T STOP THE FIGHT!!`;
+                break;
+        }
+
+
+        
         firstPar.appendChild(winnerNameDisplay);
 
 

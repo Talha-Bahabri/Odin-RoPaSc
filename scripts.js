@@ -26,37 +26,51 @@ function computerSelection() {
 
 function playerSelection() {
 
-    // let playerChocie = prompt("Choose between Rock,Paper,Scissors");
-    // playerChocie = playerChocie.toString().toLowerCase().trim();
+    const btnRockSel = document.querySelector('#btnRock');
 
-    let isCorrect = false;
-    while(true){
-        playerChocie = prompt("Choose between Rock,Paper,Scissors");
-        playerChocie = playerChocie.toString().toLowerCase().trim();
+    btnRockSel.addEventListener('click', () => {
+        alert("Hello World");
+      });
+       
+
+
+
+    // ````````````let playerChocie = prompt("Choose between Rock,Paper,Scissors");
+    //``````````` playerChocie = playerChocie.toString().toLowerCase().trim();
+
+    // let isCorrect = false;
+    // while(true){
+    //     playerChocie = prompt("Choose between Rock,Paper,Scissors");
+    //     playerChocie = playerChocie.toString().toLowerCase().trim();
         
-        switch(playerChocie) {
-            case "rock":
-                 player1 = playerChocie;
-                 isCorrect = true;
-                 break;
+    //     switch(playerChocie) {
+    //         case "rock":
+    //              player1 = playerChocie;
+    //              isCorrect = true;
+    //              break;
 
-            case "paper":
-                player1 = playerChocie;
-                isCorrect = true;
-                break;
+    //         case "paper":
+    //             player1 = playerChocie;
+    //             isCorrect = true;
+    //             break;
         
-            case "scissors":
-                player1 = playerChocie;
-                isCorrect = true;
-                break;
-        }
+    //         case "scissors":
+    //             player1 = playerChocie;
+    //             isCorrect = true;
+    //             break;
+    //     }
 
-        if(isCorrect){
-            break;
-        }
-    }  
-    return player1;  
+    //     if(isCorrect){
+    //         break;
+    //     }
+    // }  
+    // return player1; 
+
 }
+
+
+
+
 
 function game() {
     let player1Score = 0;
@@ -140,3 +154,6 @@ function game() {
 
     // console.log(`The winner is : ${game()}`);
 
+
+
+    playerSelection();

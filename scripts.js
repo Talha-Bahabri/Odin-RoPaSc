@@ -159,13 +159,14 @@ function gameLogic(player1cho) {
 
     function changingDisplayText(player1cho , player2cho , winnerName){
         const firstPar = document.querySelector('.par');
+
+        NEXT TIME YOU ARE HERE , TRY TO ADD A NEW PARAGARPH , ONE FOR THE ITEMS USED , THE OTHER FOR THE WINNING QOUTE
         
         switch(winnerName) {
 
-            case `Player 1`:    
-                firstPar.textContent = ` ${player1cho} vs ${player2cho} 
-
-                You win, Sheath your blade, for you have brough peace. `;
+            case `Player 1`:   
+                firstPar.textContent =  ` ${player1cho} vs ${player2cho}  
+                           You win, Sheath your blade, for you have brough peace.` ;
                 break;
 
             case `Player 2`:

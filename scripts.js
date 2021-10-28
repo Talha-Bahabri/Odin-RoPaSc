@@ -160,23 +160,27 @@ function gameLogic(player1cho) {
     function changingDisplayText(player1cho , player2cho , winnerName){
         const firstPar = document.querySelector('.par');
         const secondPar =document.querySelector('.par2');
+        const thirdPar = document.querySelector('.par3');
 
         switch(winnerName) {
 
             case `Player 1`:   
                 firstPar.textContent =  ` ${player1cho.toUpperCase()} vs ${player2cho.toUpperCase()} `
                 secondPar.textContent = `You win, Sheath your blade, for you have brough peace.`;
+                thirdPar.textContent = `Player : ${player1Score} CPU : ${player2Score}`;
                       
                 break;
 
             case `Player 2`:
                 firstPar.textContent = `${player1cho.toUpperCase()} vs ${player2cho.toUpperCase()} `
                 secondPar.textContent = `You Died, is this a dark souls refrence ? maybe :)`;
+                thirdPar.textContent = `Player : ${player1Score}        CPU : ${player2Score}`;
                 break;
 
             case `Draw!!`:
                 firstPar.textContent = ` ${player1cho.toUpperCase()} vs ${player2cho.toUpperCase()} `
                 secondPar.textContent = `ITS A DRAW!! DON'T STOP THE FIGHT!!`;
+                thirdPar.textContent = `Player : ${player1Score}        CPU : ${player2Score}`;
 
                 break;
         }

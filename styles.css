@@ -17,6 +17,7 @@
 }
 
 .par {
+    text-align: center;
     flex-direction: column;
     align-items: center;
     font-size: xx-large;
@@ -24,11 +25,20 @@
     
 }
 .par2 {
+    text-align: center;
     flex-direction: column;
     align-items: center;
     font-size: xx-large;
     font-weight: bold;
     
+}
+
+.par3 {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    font-size: xx-large;
+    font-weight: bold;
 }
 
 

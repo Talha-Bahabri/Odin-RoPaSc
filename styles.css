@@ -9,6 +9,7 @@
 
 .boxResults {
     display: flex;
+    flex-direction: column;
     justify-items: center;
     align-items: center;
     background-color: green;
@@ -17,6 +18,13 @@
 }
 
 .par {
+    flex-direction: column;
+    align-items: center;
+    font-size: xx-large;
+    font-weight: bold;
+    
+}
+.par2 {
     flex-direction: column;
     align-items: center;
     font-size: xx-large;

@@ -159,26 +159,27 @@ function gameLogic(player1cho) {
 
     function changingDisplayText(player1cho , player2cho , winnerName){
         const firstPar = document.querySelector('.par');
+        const secondPar =document.querySelector('.par2');
 
-        NEXT TIME YOU ARE HERE , TRY TO ADD A NEW PARAGARPH , ONE FOR THE ITEMS USED , THE OTHER FOR THE WINNING QOUTE
-        
+
+
         switch(winnerName) {
 
             case `Player 1`:   
-                firstPar.textContent =  ` ${player1cho} vs ${player2cho}  
-                           You win, Sheath your blade, for you have brough peace.` ;
+                firstPar.textContent =  ` ${player1cho} vs ${player2cho} `
+                secondPar.textContent = `You win, Sheath your blade, for you have brough peace.`;
+                      
                 break;
 
             case `Player 2`:
-                firstPar.textContent = `${player1cho} vs ${player2cho} 
-                
-                You Died, is this a dark souls refrence ? maybe :) `;
+                firstPar.textContent = `${player1cho} vs ${player2cho} `
+                secondPar.textContent = `You Died, is this a dark souls refrence ? maybe :)`;
                 break;
 
             case `Draw!!`:
-                firstPar.textContent = `${player1cho} vs ${player2cho}
+                firstPar.textContent = ` ${player1cho} vs ${player2cho} `
+                secondPar.textContent = `ITS A DRAW!! DON'T STOP THE FIGHT!!`;
 
-                ITS A DRAW!! DON'T STOP THE FIGHT!!`;
                 break;
         }
 
